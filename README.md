@@ -4,7 +4,7 @@ Welcome to Pitch Spork! The album review application where independent and curre
 
 # Creators (in alphabetical order):
 - Ilya Krisa
-- Karalynn Leann
+- Karalynn Partain
 - Matthew Mereba
 - Patrick Stevenson
 - Yousif Al Asfar
