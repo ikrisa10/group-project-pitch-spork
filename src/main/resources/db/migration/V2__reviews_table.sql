@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS reviews CASCADE;
+CREATE TABLE reviews (
+  id SERIAL PRIMARY KEY,
+  rating INTEGER NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(320) NOT NULL,
+  review_body TEXT,
+  created_at TIMESTAMP,
+  album_id INTEGER NOT NULL REFERENCES albums(id)
+);
