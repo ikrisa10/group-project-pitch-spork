@@ -33,24 +33,24 @@ public class Review {
   @Column(name="id", nullable = false, unique = true)
   private Integer id;
 
-  @NotNull
-  @Positive
+  @NotNull(message = "Rating should be provided")
+  @Positive(message = "Rating can not be negative or zero")
   @Range(min=1, max = 5, message= "Rating number should be between 1 and 5")
   @Column(name="rating", nullable = false)
   private Integer rating;
 
-  @NotBlank
-  @Length(max=255)
+  @NotBlank(message = "Name field should be filled out")
+  @Length(max=255, message = "Name field should be 255 characters max")
   @Column(name="name", nullable = false)
   private String name;
 
-  @NotBlank
-  @Length(max=320)
-  @Email
+  @NotBlank(message = "Email field should be filled out")
+  @Length(max=320, message = "Email field should be 320 characters max")
+  @Email(message = "Email should be well formed and have @ part (...@gmail.com, @aol.com)")
   @Column(name="email", nullable = false)
   private String email;
 
-  @Column(name="review_body", nullable = false)
+  @Column(name="review_body")
   private String reviewBody;
 
   @Column(name="created_at", nullable = false)
