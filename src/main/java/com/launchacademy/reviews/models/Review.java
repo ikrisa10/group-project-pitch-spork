@@ -13,6 +13,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,7 +33,7 @@ public class Review {
   @Column(name="id", nullable = false, unique = true)
   private Integer id;
 
-  @NotBlank
+  @NotNull
   @Positive
   @Range(min=1, max = 5, message= "Rating number should be between 1 and 5")
   @Column(name="rating", nullable = false)
@@ -53,7 +54,7 @@ public class Review {
   private String reviewBody;
 
   @Column(name="created_at", nullable = false)
-  private Date createdAt;
+  private Date createdAt = new Date();
 
   @ManyToOne
   @JoinColumn(name="album_id", nullable = false)

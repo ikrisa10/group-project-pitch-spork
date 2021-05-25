@@ -14,6 +14,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -60,13 +61,13 @@ public class Album {
   @Column(name="cover_url", nullable = false)
   private String coverUrl;
 
-  @NotBlank
+  @NotNull
   @Positive
   @Range(min = 1980)
   @Column(name="release_year", nullable = false)
   private Integer releaseYear;
 
-  @URL
+  @NotBlank
   @Column(name="embed_url", nullable = false)
   private String embedUrl;
 
