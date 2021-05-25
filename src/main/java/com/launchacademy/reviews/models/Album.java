@@ -1,19 +1,26 @@
 package com.launchacademy.reviews.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Positive;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "albums")
@@ -63,7 +70,7 @@ public class Album {
   @Column(name="embed_url", nullable = false)
   private String embedUrl;
 
-  @OneToMany( mappedBy = "review", cascade = CascadeType.ALL)
-  @JsonIgnoreProperties("review")
-  private List<Album> albums = new ArrayList<>() ;
+  @OneToMany( mappedBy = "album", cascade = CascadeType.ALL)
+  @JsonIgnoreProperties("album")
+  private List<Review> reviews = new ArrayList<>() ;
 }
