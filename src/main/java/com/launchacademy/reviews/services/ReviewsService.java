@@ -2,7 +2,6 @@ package com.launchacademy.reviews.services;
 
 import com.launchacademy.reviews.models.Album;
 import com.launchacademy.reviews.models.Review;
-import com.launchacademy.reviews.repositories.AlbumsRepository;
 import com.launchacademy.reviews.repositories.ReviewsRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,4 +23,9 @@ public class ReviewsService {
 		return targetAlbum.getReviews();
 	}
 
+  public Review saveReview(Review review, Integer albumId) {
+    Album reviewedAlbum = this.albumService.findById(albumId);
+    review.setAlbum(reviewedAlbum);
+    return this.reviewsRepository.save(review);
+  }
 }

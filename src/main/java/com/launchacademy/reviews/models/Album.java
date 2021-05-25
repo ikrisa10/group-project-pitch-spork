@@ -15,7 +15,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -61,9 +60,8 @@ public class Album {
   @Column(name="cover_url", nullable = false)
   private String coverUrl;
 
-  @NotNull
-  @Positive
-  @Range(min = 1980)
+  @NotNull(message = "Release year should be provided")
+  @Range(min = 1980, message = "We are only interested in new, undiscovered albums from 1980 release years")
   @Column(name="release_year", nullable = false)
   private Integer releaseYear;
 

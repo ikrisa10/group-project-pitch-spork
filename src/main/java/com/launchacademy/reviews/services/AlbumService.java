@@ -35,12 +35,13 @@ public class AlbumService {
 		return unreviewedList;
 	}
 
-	@NoArgsConstructor
-	private class UrlNotFoundException extends RuntimeException {
-
+	public Album saveAlbum(Album album) {
+		return this.albumsRepository.save(album);
 	}
 
-	;
+	@NoArgsConstructor
+	private class UrlNotFoundException extends RuntimeException {
+	}
 
 	@ControllerAdvice
 	private class UrlNotFoundAdvice {
