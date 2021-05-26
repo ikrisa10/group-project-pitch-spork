@@ -3,10 +3,10 @@ import React from "react"
 const ReviewTile = props => {
 
     let reviewDiv = "blank"
-    if(props.reviewBody == null) {
-        reviewDiv = `<p> This user did not leave additional details for their rating </p>`
+    if(props.reviewBody == null || props.reviewBody == "") {
+        reviewDiv = <p>This user did not leave additional details for their rating</p>
     } else {
-        reviewDiv = `<p>{props.reviewBody} </p>`
+        reviewDiv = <p>{props.reviewBody}</p>
     }
 
     return (

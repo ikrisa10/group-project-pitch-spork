@@ -5,20 +5,22 @@ import ReviewTile from "./ReviewTile";
 const AlbumShow = props => {
     const [album, setAlbum] = useState({})
     const [form, setForm] = useState(false)
+    const [reviews, setReviews] = useState([])
 
     const getAlbum = async () => {
         try {
             const id = props.match.params.id
-            const response = await fetch(`/api/v1/albums/{id}`)
+            const response = await fetch(`/api/v1/album/${id}`)
             if (!response.ok) {
                 const errorMessage = `${response.status} (${response.statusText})`
                 const error = new Error(errorMessage)
                 throw error
             }
             const responseBody = await response.json()
-            setAlbum(responseBody.album)
+            setAlbum(responseBody)
+            setReviews(responseBody.reviews)
         } catch (err) {
-            console.error(`Pet not found: ${err.message}`)
+            console.error(`Album not found: ${err.message}`)
         }
     }
 
@@ -30,34 +32,33 @@ const AlbumShow = props => {
         }
     }
 
-    let Review
+    let reviewFormDisplay
     if (form == true) {
-        Review = <ReviewForm id={album.id} />
+        reviewFormDisplay = <ReviewForm id={album.id} />
     }
 
-    //need a reviews method/property in album
-    const reviewsList = album.reviews.map(review => {
+    const reviewsList = reviews.map(review => {
         return (
-            <ReviewTile
-                key={review.id}
+            <li key={review.id}><ReviewTile
+                id={review.id}
                 rating={review.rating}
                 name={review.name}
                 reviewBody={review.reviewBody}
                 createdAt={review.createdAt}
-            />
+            /></li>
         )
     })
 
-    let handleClick = event => {
-        event.preventDefault()
-        toggleFormShow()
-    }
+    // let handleClick = event => {
+    //     event.preventDefault()
+    //     toggleFormShow()
+    // }
 
     useEffect(() => {
         getAlbum()
     }, [])
 
-    const embeddedPlayer = `<iframe src="{album.embedUrl}" width="300" height="380"  allowtransparency="true" allow="encrypted-media"></iframe>`
+    // const embeddedPlayer = `<iframe src="{album.embedUrl}" width="300" height="380"  allowtransparency="true" allow="encrypted-media"></iframe>`
 
     const altText = `a photo of ${album.title}, an album by ${album.artist}`
 
@@ -68,21 +69,15 @@ const AlbumShow = props => {
                 <h1>{album.title}</h1>
                 <h3>{album.artist}</h3>
                 <h3>Genre: {album.artist}, released in {album.releaseYear}</h3>
-                {embeddedPlayer}
+                {album.embedUrl}
                 <div>
-                    <div>
-                        <form>
-                            <button className="button hollow" onClick={handleClick}>
-                                Adopt
-                            </button>
-                        </form>
-                        {Review}
-                    </div>
+                  <div>
+                    {reviewFormDisplay}
+                    <button className="button hollow" onClick={toggleFormShow}></button>
+                  </div>
                 </div>
-                <ul>
-                    <li>
-                        {reviewsList}
-                    </li>
+                <ul className="no-bullet">
+                  {reviewsList}   
                 </ul>
             </div>
         </div>
