@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
 import AlbumTile from "./AlbumTile.js"
 
-const IndexPage = props => {
+const undiscoveredIndexPage = props => {
     const [albums, setAlbums] = useState([])
 
     useEffect(() => {
@@ -18,7 +17,7 @@ const IndexPage = props => {
                 throw error
             }
             const responseBody = await response.json()
-            setAlbums(responseBody.albums)
+            setAlbums(responseBody)
         } catch (err) {
             console.error(`Error in Fetch: ${err.message}`)
         }
@@ -44,4 +43,4 @@ const IndexPage = props => {
     )
 }
 
-export default IndexPage
+export default undiscoveredIndexPage
