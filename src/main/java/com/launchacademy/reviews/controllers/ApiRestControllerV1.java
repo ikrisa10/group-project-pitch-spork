@@ -38,6 +38,11 @@ public class ApiRestControllerV1 {
     return albumService.findAllAlbums();
   }
 
+  @GetMapping("/album/{id}")
+  public Album getSpecificAlbum(@PathVariable Integer id) {
+    return albumService.findById(id);
+  }
+
   @GetMapping("/albums/random")
   public Album getRandomAlbum() {
     return albumService.getRandomAlbum();
@@ -53,7 +58,7 @@ public class ApiRestControllerV1 {
     return albumService.findUnreviewedAlbums();
   }
 
-  @PostMapping("/album/create")
+  @PostMapping("/albums/create")
   public ResponseEntity createAlbum(@RequestBody @Valid Album album, BindingResult bindingResult) {
     if(bindingResult.hasErrors()) {
       Map<String, String> errors = new HashMap<>();

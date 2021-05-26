@@ -1,14 +1,10 @@
 import React, { useEffect } from "react"
 import { BrowserRouter, Route } from "react-router-dom"
 import { hot } from "react-hot-loader/root"
-import NavBar from "./NavBar"
-import "foundation-sites"
-import $ from "jquery"
+import NavBar from "./Navbar.js"
+import 'regenerator-runtime/runtime'
 
 const App = props => {
-  useEffect(() => {
-    $(document).foundation()
-  }, [])
 
   return (
       <div>

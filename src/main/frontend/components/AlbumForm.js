@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import ErrorList from "./ErrorList"
+//import ErrorList from "./ErrorList"
 
 const AlbumForm = props => {
     const [getForm, setForm] = useState({
@@ -93,7 +93,7 @@ const AlbumForm = props => {
             <h1>Add your album [bands or musicians only]</h1>
             <hr></hr>
             <form onSubmit={handleSubmit} >
-                <ErrorList errors={errors} />
+//                <ErrorList errors={errors} />
                 {/*  title VARCHAR(255) NOT NULL,*/}
                 <label htmlFor="title">
                     Album Title

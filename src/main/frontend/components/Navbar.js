@@ -1,9 +1,10 @@
 import React from "react"
-import { Route, Switch } from "react-router-dom"
-import AlbumForm from "./AlbumForm"
-import UndiscoveredIndex from "./UndiscoveredIndex"
-import Index from "./Index"
-import OurTeam from "./OurTeam"
+import { Route, Switch, Link } from "react-router-dom"
+import AlbumForm from "./MusicianForm.js"
+import UndiscoveredIndex from "./UndiscoveredIndex.js"
+import Index from "./Index.js"
+import OurTeam from "./OurTeam.js"
+import AlbumShow from "./AlbumShow.js"
 
 const NavBar = props => {
     return (
@@ -23,9 +24,10 @@ const NavBar = props => {
                 </div>
 
                 <Switch>
+                    <Route exact path="/albums" component={Index} />
+                    <Route exact path="/albums/:id" component={AlbumShow} />
                     <Route exact path="/albums/new" component={AlbumForm} />
                     <Route exact path="/albums/undiscovered" component={UndiscoveredIndex} />
-                    <Route exact path="/albums" component={Index} />
                     <Route exact path="/our-team" component={OurTeam} />
                 </Switch>
             </div>

@@ -1,31 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Redirect } from "react-router-dom"
+import _ from "lodash"
+
 
 export const MusicianForm = (props) => {
   const [newAlbum, setNewAlbum] = useState({
-    title = "",
-    artist = "",
-    genre = "",
-    email = "",
-    coverUrl = "",
-    releaseYear = "",
-    embedUrl = ""
+    title: "",
+    artist: "",
+    genre: "",
+    email: "",
+    coverUrl: "",
+    releaseYear: "",
+    embedUrl: ""
   })
   const [errors, setErrors] = useState([])
   const [redirect, setRedirect] = useState(false)
+  const [returnAlbum, setReturnAlbum] = useState([])
 
   const addNewAlbum = async () => {
     try {
-      const response = await fetch("/api/v1/album/create", {
+      const response = await fetch("/api/v1/albums/create", {
         method: "POST",
         headers: new Headers({
           "Content-Type": "application/json"
         }),
-        body: JSON.stringify(newSurrender)
+        body: JSON.stringify(newAlbum)
       })
       if (!response.ok) {
         if (response.status === 422) {
           const albumBody = await response.json()
-          return setErrors(albumBody.errors)
+          return setErrors(albumBody)
         } else {
           const errorMessage = `${response.status} (${response.statusText})`
           const error = new Error(errorMessage)
@@ -34,18 +38,22 @@ export const MusicianForm = (props) => {
       } else {
         const albumBody = await response.json()
         if (albumBody) {
+          setReturnAlbum(albumBody)
           setRedirect(true)
         }
       }
     } catch (error) {
       console.error(`Error in fetch: ${error}`)
     }
+  }
+
     const handleInput = event => {
       setNewAlbum({
         ...newAlbum,
         [event.currentTarget.name]: event.currentTarget.value
       })
     }
+
     const validateInput = () => {
       let submissionErrors = {}
       const requiredFields = [
@@ -58,50 +66,47 @@ export const MusicianForm = (props) => {
         "embedUrl"
       ]
       requiredFields.forEach(field => {
-        if (newSurrender[field].trim() === "") {
+        if (newAlbum[field].trim() === "") {
           submissionErrors = { ...submissionErrors, [field]: `is required` }
         }
       })
       setErrors(submissionErrors)
       return _.isEmpty(submissionErrors)
     }
+
     const handleSubmit = event => {
       event.preventDefault()
       if (validateInput()) {
         addNewAlbum()
       }
     }
-    let albumId = albumBody.id
+
     if (redirect) {
-      return <Redirect to={`/album/create/${albumId}`} />
+      return <Redirect to={`/album/create/${returnAlbum.id}`} />
     }
 
-    const clearChange =(event) =>{
+    const clearChange = (event) => {
       event.preventDefault()
-      if((newAlbum.title !== "" || newAlbum.artist !== ""
-       || newAlbum.genre !== "" || newAlbum.email !== "" 
-       || newAlbum.coverUrl !== "" || newAlbum.releaseYear !== "" || newAlbum.embedUrl !== "")){
-        setNewAlbum({
-          title = "",
-          artist = "",
-          genre = "",
-          email = "",
-          coverUrl = "",
-          releaseYear = "",
-          embedUrl = ""
-        })
-      }
+      setNewAlbum({
+        title: "",
+        artist: "",
+        genre: "",
+        email: "",
+        coverUrl: "",
+        releaseYear: "",
+        embedUrl: ""
+      })
     }
-  }
+
   return (
     <div>
-           <h2>Add Your Album:</h2>
+      <h2>Add Your Album:</h2>
       <form onSubmit={handleSubmit} className="adoption_app">
-        <div className="grid-contrainer">
+        <div className="grid-container">
           <div className="grid-x grid-padding-x">
-            <div className="cell">
+            {/* <div className="cell">
               <Error errors={errors} />
-            </div>
+            </div> */}
 
             <div className="row">
               <div className="medium-6 columns">
@@ -113,7 +118,9 @@ export const MusicianForm = (props) => {
                     name="title"
                     onChange={handleInput}
                     value={newAlbum.title}
+                    placeholder="Album Title"
                   />
+                <span className="error">{errors.title}</span>
                 </label>
               </div>
               <div className="medium-6 columns">
@@ -125,7 +132,9 @@ export const MusicianForm = (props) => {
                     name="artist"
                     onChange={handleInput}
                     value={newAlbum.artist}
+                    placeholder="Your or Your Band's Name"
                   />
+                  <span className="error">{errors.artist}</span>
                 </label>
               </div>
               <div className="medium-6 columns">
@@ -137,7 +146,9 @@ export const MusicianForm = (props) => {
                     name="genre"
                     onChange={handleInput}
                     value={newAlbum.genre}
+                    placeholder="Genre of Your Album"
                   />
+                  <span className="error">{errors.genre}</span>
                 </label>
               </div>
               <div className="medium-6 columns">
@@ -149,7 +160,9 @@ export const MusicianForm = (props) => {
                     name="email"
                     onChange={handleInput}
                     value={newAlbum.email}
+                    placeholder="Your Email"
                   />
+                  <span className="error">{errors.email}</span>
                 </label>
               </div>
               <div className="medium-6 columns">
@@ -161,7 +174,9 @@ export const MusicianForm = (props) => {
                     name="coverUrl"
                     onChange={handleInput}
                     value={newAlbum.coverUrl}
+                    placeholder="URL for the album cover"
                   />
+                  <span className="error">{errors.coverUrl}</span>
                 </label>
               </div>
               <div className="medium-6 columns">
@@ -173,7 +188,9 @@ export const MusicianForm = (props) => {
                     name="releaseYear"
                     onChange={handleInput}
                     value={newAlbum.releaseYear}
+                    placeholder="Your Name"
                   />
+                  <span className="error">{errors.releaseYear}</span>
                 </label>
               </div>
               <div className="medium-6 columns">
@@ -185,7 +202,9 @@ export const MusicianForm = (props) => {
                     name="embedUrl"
                     onChange={handleInput}
                     value={newAlbum.embedUrl}
+                    placeholder="Embedded URL"
                   />
+                  <span className="error">{errors.embedUrl}</span>
                 </label>
               </div>
               <button className="button" onClick={clearChange}>Clear</button>
