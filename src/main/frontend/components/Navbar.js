@@ -1,6 +1,6 @@
 import React from "react"
 import { Route, Switch, Link } from "react-router-dom"
-import MusicainForm from "./MusicianForm.js"
+import MusicianForm from "./MusicianForm.js"
 import UndiscoveredIndex from "./UndiscoveredIndex.js"
 import Index from "./Index.js"
 import OurTeam from "./OurTeam.js"
@@ -25,7 +25,7 @@ const NavBar = props => {
 
                 <Switch>
                     <Route exact path="/albums" component={Index} />
-                    <Route exact path="/albums/new" component={MusicainForm} />
+                    <Route exact path="/albums/new" component={MusicianForm} />
                     <Route exact path="/albums/undiscovered" component={UndiscoveredIndex} />
                     <Route exact path="/albums/:id" component={AlbumShow} />
                     <Route exact path="/our-team" component={OurTeam} />
