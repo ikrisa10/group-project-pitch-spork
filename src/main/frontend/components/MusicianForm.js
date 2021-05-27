@@ -82,7 +82,7 @@ export const MusicianForm = (props) => {
     }
 
     if (redirect) {
-      return <Redirect to={`/album/create/${returnAlbum.id}`} />
+      return <Redirect to={`/albums/${returnAlbum.id}`} />
     }
 
     const clearChange = (event) => {
