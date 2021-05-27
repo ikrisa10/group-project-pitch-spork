@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, {useState, useEffect} from "react"
 import ReviewForm from "./ReviewForm"
 import ReviewTile from "./ReviewTile";
 
@@ -34,7 +34,7 @@ const AlbumShow = props => {
 
     let reviewFormDisplay
     if (form == true) {
-        reviewFormDisplay = <ReviewForm id={album.id} />
+        reviewFormDisplay = <ReviewForm id={album.id}/>
     }
 
     const reviewsList = reviews.map(review => {
@@ -49,35 +49,43 @@ const AlbumShow = props => {
         )
     })
 
-    // let handleClick = event => {
-    //     event.preventDefault()
-    //     toggleFormShow()
-    // }
 
     useEffect(() => {
         getAlbum()
     }, [])
 
-    // const embeddedPlayer = `<iframe src="{album.embedUrl}" width="300" height="380"  allowtransparency="true" allow="encrypted-media"></iframe>`
-
     const altText = `a photo of ${album.title}, an album by ${album.artist}`
+
+    let innerHTML = `${album.embedUrl}`
+
+    function createMarkup() {
+        return {__html: innerHTML};
+    }
+
+    function MyComponent() {
+        return <div dangerouslySetInnerHTML={createMarkup()}/>;
+    }
+
 
     return (
         <div>
             <div className="showpage">
-                <img className="showimage" src={album.coverUrl} alt={altText} />
+                <img className="showimage" src={album.coverUrl} alt={altText}/>
                 <h1>{album.title}</h1>
                 <h3>{album.artist}</h3>
                 <h3>Genre: {album.artist}, released in {album.releaseYear}</h3>
-                {album.embedUrl}
+
+
+                {MyComponent()}
+
                 <div>
-                  <div>
-                    {reviewFormDisplay}
-                    <button className="button hollow" onClick={toggleFormShow}></button>
-                  </div>
+                    <div>
+                        {reviewFormDisplay}
+                        <button className="button hollow" onClick={toggleFormShow}></button>
+                    </div>
                 </div>
                 <ul className="no-bullet">
-                  {reviewsList}   
+                    {reviewsList}
                 </ul>
             </div>
         </div>
