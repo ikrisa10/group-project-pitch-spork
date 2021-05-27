@@ -5,6 +5,7 @@ import UndiscoveredIndex from "./UndiscoveredIndex.js"
 import Index from "./Index.js"
 import OurTeam from "./OurTeam.js"
 import AlbumShow from "./AlbumShow.js"
+import Landing from "./Landing.js"
 
 const NavBar = props => {
     return (
@@ -68,6 +69,7 @@ const NavBar = props => {
             </nav>
 
             <Switch>
+                <Route exact path="/" component={Landing}/>
                 <Route exact path="/albums" component={Index}/>
                 <Route exact path="/albums/new" component={MusicianForm}/>
                 <Route exact path="/albums/undiscovered" component={UndiscoveredIndex}/>
