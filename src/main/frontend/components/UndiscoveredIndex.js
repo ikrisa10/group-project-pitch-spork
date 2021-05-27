@@ -27,6 +27,7 @@ const undiscoveredIndexPage = props => {
         return (
             <AlbumTile
                 key={album.id}
+                id={album.id}
                 title={album.title}
                 artist={album.artist}
                 genre={album.genre}
