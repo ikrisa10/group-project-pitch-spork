@@ -31,8 +31,8 @@ public class InitialDataSeeder implements CommandLineRunner {
     albumOne.setEmail("ilyakrisa@gmail.com");
     albumOne.setCoverUrl("https://pitch-spork.s3.us-east-2.amazonaws.com/kotlovan.png");
     albumOne.setReleaseYear(2020);
-    albumOne.setEmbedUrl("https://open.spotify.com/album/31U7UUNSvrTZnj5LQaQPD8?si=azTUmaa2QxW2CtANSVqfZA");
-//    albumOne.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/31U7UUNSvrTZnj5LQaQPD8\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
+//    albumOne.setEmbedUrl("https://open.spotify.com/album/31U7UUNSvrTZnj5LQaQPD8?si=azTUmaa2QxW2CtANSVqfZA");
+    albumOne.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/31U7UUNSvrTZnj5LQaQPD8\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
 
     Album albumTwo = new Album();
     albumTwo.setTitle("Invisible");
@@ -41,8 +41,8 @@ public class InitialDataSeeder implements CommandLineRunner {
     albumTwo.setEmail("ethandrone@gmail.com");
     albumTwo.setCoverUrl("https://pitch-spork.s3.us-east-2.amazonaws.com/invisible.png");
     albumTwo.setReleaseYear(2020);
-    albumTwo.setEmbedUrl("https://open.spotify.com/album/4VvpujEyT5vfDYmpLCyF3U?si=o-bATI2HTXakvlUabv3I2w");
-//    albumTwo.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/4VvpujEyT5vfDYmpLCyF3U\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
+//    albumTwo.setEmbedUrl("https://open.spotify.com/album/4VvpujEyT5vfDYmpLCyF3U?si=o-bATI2HTXakvlUabv3I2w");
+    albumTwo.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/4VvpujEyT5vfDYmpLCyF3U\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
 
     Album albumThree = new Album();
     albumThree.setTitle("3TEETH");
@@ -51,8 +51,8 @@ public class InitialDataSeeder implements CommandLineRunner {
     albumThree.setEmail("3theethobviouslydoesntexist@gmail.com");
     albumThree.setCoverUrl("https://pitch-spork.s3.us-east-2.amazonaws.com/3teeth.jpg");
     albumThree.setReleaseYear(2014);
-    albumThree.setEmbedUrl("https://open.spotify.com/album/5MJ7hN4QbRhhFcjuF7wpmL?si=tI6Tk_iAQI6kk9IL5SGnYA");
-//    albumThree.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/5MJ7hN4QbRhhFcjuF7wpmL\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
+//    albumThree.setEmbedUrl("https://open.spotify.com/album/5MJ7hN4QbRhhFcjuF7wpmL?si=tI6Tk_iAQI6kk9IL5SGnYA");
+    albumThree.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/5MJ7hN4QbRhhFcjuF7wpmL\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
 
     Album albumFour = new Album();
     albumFour.setTitle("On The Run");
@@ -61,8 +61,8 @@ public class InitialDataSeeder implements CommandLineRunner {
     albumFour.setEmail("bigod20ohobviouslydoesntexist@gmail.com");
     albumFour.setCoverUrl("https://pitch-spork.s3.us-east-2.amazonaws.com/on+the+run.PNG");
     albumFour.setReleaseYear(1992);
-    albumFour.setEmbedUrl("https://open.spotify.com/album/61IWDOL2Uv5uttuB9r6t3J?si=0-toMZB_TE2jV1MEvuL8CA");
-//    albumFour.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/61IWDOL2Uv5uttuB9r6t3J\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
+//    albumFour.setEmbedUrl("https://open.spotify.com/album/61IWDOL2Uv5uttuB9r6t3J?si=0-toMZB_TE2jV1MEvuL8CA");
+    albumFour.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/61IWDOL2Uv5uttuB9r6t3J\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
 
     Album albumFive = new Album();
     albumFive.setTitle("Superdynamitefunkysoul");
@@ -71,8 +71,8 @@ public class InitialDataSeeder implements CommandLineRunner {
     albumFive.setEmail("f2dohobviouslydoesntexist@gmail.com");
     albumFive.setCoverUrl("https://is3-ssl.mzstatic.com/image/thumb/Music69/v4/f6/aa/67/f6aa673b-2872-6431-4e58-264686622f21/766433216387.jpg/600x600bf.png");
     albumFive.setReleaseYear(2015);
-    albumFive.setEmbedUrl("https://open.spotify.com/album/5mKAfuLtz4uhQ3iYHYqvIA?si=pTTGoWCpQIWz_rd-Vl8ygw");
-//    albumFive.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/5mKAfuLtz4uhQ3iYHYqvIA\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
+//    albumFive.setEmbedUrl("https://open.spotify.com/album/5mKAfuLtz4uhQ3iYHYqvIA?si=pTTGoWCpQIWz_rd-Vl8ygw");
+    albumFive.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/5mKAfuLtz4uhQ3iYHYqvIA\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
 
     Album albumSix = new Album();
     albumSix.setTitle("The Jungle Is The Only Way Out");
@@ -81,8 +81,8 @@ public class InitialDataSeeder implements CommandLineRunner {
     albumSix.setEmail("merebaohobviouslydoesntexist@gmail.com");
     albumSix.setCoverUrl("https://images.genius.com/e1d96da1cc682b39363ee68c05fc4452.1000x1000x1.jpg");
     albumSix.setReleaseYear(2019);
-    albumSix.setEmbedUrl("https://open.spotify.com/album/40L9yPrh6yD1ECI3ofNfPc?si=181Vif1kS7KlhFMOsrInUg");
-//    albumSix.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/40L9yPrh6yD1ECI3ofNfPc\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
+//    albumSix.setEmbedUrl("https://open.spotify.com/album/40L9yPrh6yD1ECI3ofNfPc?si=181Vif1kS7KlhFMOsrInUg");
+    albumSix.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/40L9yPrh6yD1ECI3ofNfPc\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
 
     Album albumSeven = new Album();
     albumSeven.setTitle("Failure");
@@ -91,8 +91,8 @@ public class InitialDataSeeder implements CommandLineRunner {
     albumSeven.setEmail("poisesobviouslydoesntexist@gmail.com");
     albumSeven.setCoverUrl("https://upload.wikimedia.org/wikipedia/en/1/15/FailurePosiesAlbum.jpg");
     albumSeven.setReleaseYear(1988);
-    albumSeven.setEmbedUrl("https://open.spotify.com/album/3zNxQ174useHitgEbhTalk?si=bWYrj1zaQsGts9rA1hgrfg");
-//    albumSeven.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/3zNxQ174useHitgEbhTalk\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
+//    albumSeven.setEmbedUrl("https://open.spotify.com/album/3zNxQ174useHitgEbhTalk?si=bWYrj1zaQsGts9rA1hgrfg");
+    albumSeven.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/3zNxQ174useHitgEbhTalk\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
 
 
     Album albumThreeSaved = new Album();
@@ -135,6 +135,5 @@ public class InitialDataSeeder implements CommandLineRunner {
       reviewsRepository.save(reviewForAlbumFive);
       reviewsRepository.save(reviewForAlbumSeven);
     }
-
   }
 }
