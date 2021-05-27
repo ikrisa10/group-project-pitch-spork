@@ -1,5 +1,5 @@
 body {
-  background-color: brown;
+  background-color: lightblue;
 }
 .card {
     position: relative;
@@ -9,7 +9,6 @@ body {
     transform-style: preserve-3d;
     perspective: 600px;
     transition: .5s;
-;
 }
 .card:hover .card-front{
     transform: rotateX(-180deg);
@@ -112,6 +111,7 @@ body {
     transition: .5s;
     background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/kara.PNG);
 }
+/*<<<<<<< HEAD*/
 
 .footer {
     position: fixed;
@@ -157,3 +157,57 @@ ul {
 .companyicon {
     height: 3rem;
 }
+/*=======*/
+#album {
+ border-image-width: 100cm;
+ font-size: 3rem;
+}
+ul {
+    list-style-type: none;
+    border-image-slice: inherit;
+}
+
+#head {
+ font-size:3rem;
+ font-weight:bold;
+ margin: auto;
+ color:#1779A7;
+ font-style: italic;
+ text-shadow: 2px 2px #6457ad;
+}
+
+#head1 {
+    font-size:3rem;
+    font-weight:bold;
+    margin: auto;
+    color:#1779A7;
+    font-style: italic;
+    text-shadow: 2px 2px #6457ad;
+   }
+
+.indexImage{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px #0b081d;
+}
+.album-tile {
+    margin: auto;
+    padding-top: 30px;
+    padding-right:15px ;
+}
+.description {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: inherit;
+}
+.album-title {
+    font-style: normal;
+    font-weight: 800;
+    color:rgb(88, 6, 6);
+    padding-bottom: 10px;
+}
+.album-d {
+  margin-top: 0px;
+}
+/*>>>>>>> 0df6200349c05691cf4fd7cd55a96f01207c5c64*/

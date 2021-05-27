@@ -38,8 +38,14 @@ const IndexPage = props => {
 
     return (
         <div className="centered">
-            <h1>All Albums to Review</h1>
-            <ul className="grid-x grid-margin-x">{albumList}</ul>
+        <div className="grid-container">
+            <h1 id="head">All Albums to Review</h1>
+            <div className="grid-x grid-padding-x">
+            <ul className="grid-x grid-margin-x" id="album">
+            {albumList}
+            </ul>
+        </div>
+        </div>
         </div>
     )
 }

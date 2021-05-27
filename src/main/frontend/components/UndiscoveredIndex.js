@@ -38,8 +38,10 @@ const undiscoveredIndexPage = props => {
 
     return (
         <div className="centered">
-            <h1>Undiscovered Artists - Be the First to Review</h1>
+            <div className="grid-container">
+            <h1 id="head1">Undiscovered Artists - Be the First to Review</h1>
             <ul className="grid-x grid-margin-x">{albumList}</ul>
+            </div>
         </div>
     )
 }
