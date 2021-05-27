@@ -9,7 +9,6 @@ body {
     transform-style: preserve-3d;
     perspective: 600px;
     transition: .5s;
-;
 }
 .card:hover .card-front{
     transform: rotateX(-180deg);
@@ -112,6 +111,53 @@ body {
     transition: .5s;
     background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/kara.PNG);
 }
+/*<<<<<<< HEAD*/
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: darkgrey;
+    text-align: center;
+    -webkit-box-shadow: 10px 10px 8px 8px #444444;
+    -moz-box-shadow: 10px 10px 8px 8px #494949;
+    box-shadow: 10px 10px 8px 8px #525252;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.centered {
+    text-align: center;
+    margin: auto;
+    top: 50%;
+}
+
+#navbar {
+    background-color: white;
+    -webkit-box-shadow: 0 10px 8px -8px #444444;
+    -moz-box-shadow: 0 10px 8px -8px #494949;
+    box-shadow: 0 10px 8px -8px #525252;
+}
+#navbar a{
+    color: black;
+    font-size: 1rem;
+}
+#navbar ul, li {
+    background-color: white;
+}
+.menuphoto {
+    max-width: 100%;
+    width: 2rem;
+}
+
+.companyicon {
+    height: 3rem;
+}
+/*=======*/
 #album {
  border-image-width: 100cm;
  font-size: 3rem;
@@ -164,3 +210,4 @@ ul {
 .album-d {
   margin-top: 0px;
 }
+/*>>>>>>> 0df6200349c05691cf4fd7cd55a96f01207c5c64*/
