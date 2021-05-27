@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, {useState, useEffect} from "react"
 import AlbumTile from "./AlbumTile.js"
 
 const IndexPage = props => {
     const [albums, setAlbums] = useState([])
 
-    
+
     const getAlbums = async () => {
         try {
             const response = await fetch(`/api/v1/albums`)
@@ -19,7 +19,7 @@ const IndexPage = props => {
             console.error(`Error in Fetch: ${err.message}`)
         }
     }
-    
+
     useEffect(() => {
         getAlbums()
     }, [])
@@ -38,14 +38,14 @@ const IndexPage = props => {
 
     return (
         <div className="centered">
-        <div className="grid-container">
-            <h1 id="head">All Albums to Review</h1>
-            <div className="grid-x grid-padding-x">
-            <ul className="grid-x grid-margin-x" id="album">
-            {albumList}
-            </ul>
-        </div>
-        </div>
+            <div className="grid-container">
+                <h1 id="head">All Albums to Review</h1>
+                <div className="grid-x grid-padding-x">
+                    <ul className="grid-x grid-margin-x" id="album">
+                        {albumList}
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }

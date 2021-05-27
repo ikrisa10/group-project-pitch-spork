@@ -1,3 +1,7 @@
+.bgvideo {
+    position: absolute;
+    width: 100%;
+}
 body {
   background-color: lightblue;
 }
@@ -111,10 +115,9 @@ body {
     transition: .5s;
     background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/kara.PNG);
 }
-/*<<<<<<< HEAD*/
 
 .footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -157,7 +160,7 @@ ul {
 .companyicon {
     height: 3rem;
 }
-/*=======*/
+
 #album {
  border-image-width: 100cm;
  font-size: 3rem;
@@ -210,4 +213,3 @@ ul {
 .album-d {
   margin-top: 0px;
 }
-/*>>>>>>> 0df6200349c05691cf4fd7cd55a96f01207c5c64*/
