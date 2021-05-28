@@ -26,13 +26,15 @@ const IndexPage = props => {
 
     const albumList = albums.map(album => {
         return (
-            <li key={album.id}><AlbumTile
+            <li key={album.id} className="inner-content cell small-3 album-tile">
+                <AlbumTile
                 id={album.id}
                 title={album.title}
                 artist={album.artist}
                 genre={album.genre}
                 coverUrl={album.coverUrl}
-            /></li>
+            />
+            </li>
         )
     })
 
@@ -49,6 +51,6 @@ const IndexPage = props => {
             </div>
         </div>
     )
-}
+};
 
 export default IndexPage

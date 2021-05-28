@@ -25,14 +25,16 @@ const undiscoveredIndexPage = props => {
 
     const albumList = albums.map(album => {
         return (
-            <AlbumTile
-                key={album.id}
-                id={album.id}
-                title={album.title}
-                artist={album.artist}
-                genre={album.genre}
-                coverUrl={album.coverUrl}
-            />
+            <li key={album.id} className="inner-content cell small-3 album-tile">
+                <AlbumTile
+                    key={album.id}
+                    id={album.id}
+                    title={album.title}
+                    artist={album.artist}
+                    genre={album.genre}
+                    coverUrl={album.coverUrl}
+                />
+            </li>
         )
     })
 
@@ -41,10 +43,12 @@ const undiscoveredIndexPage = props => {
             <div className="grid-container">
             <img className="imageheader" src="https://pitch-spork.s3.us-east-2.amazonaws.com/undiscovered-text.png" alt="text reads undiscovered" />
                 <br/>
-            <ul className="grid-x grid-margin-x">{albumList}</ul>
+            <ul className="grid-x grid-margin-x" id="album">
+                {albumList}
+            </ul>
             </div>
         </div>
     )
-}
+};
 
 export default undiscoveredIndexPage

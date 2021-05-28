@@ -7,6 +7,54 @@
     top: 50%;
 }
 
+#albumshowpage {
+    margin-top:7rem;
+}
+
+.showalbumcover {
+    height: 100px;
+    float: left;
+    margin-left: 3rem;
+}
+
+.showalbumtext {
+    padding-top: 10px;
+    padding-left: 3rem;
+    height: 100px;
+    float: right;
+}
+
+.showcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:2rem;
+}
+
+.reviewcontainer {
+    text-align: left;
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 20px;
+}
+
+.reviewcontainer img {
+    height: 75px;
+    margin-right: 20px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.reviewername {
+    font-weight: bold;
+}
+
+.reviewcontent {
+    font-style: italic;
+}
+
 .imageheader{
     margin-top: 5rem;
 }
@@ -55,10 +103,10 @@ video {
 }
 
 .featuredalbum {
-    background-color: rgba(255, 255, 255, 0.66);
+    background-color: rgba(255, 255, 255, 0.78);
     margin-left: 30px;
     margin-right: 30px;
-    padding: 20px;
+    padding: 3rem;
     margin-top: 60rem;
     text-align: center;
     align-content: center;
@@ -83,7 +131,10 @@ ul {
 }
 
 .featuredSize {
-    height: 500px;
+    height: 350px;
+    -webkit-box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.6);
+    box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.82);
 }
 .menuphoto {
     max-width: 100%;
@@ -98,8 +149,6 @@ ul {
     border-image-width: .5rem;
     font-size: 3rem;
 }
-
-
 
 .indexImage{
     width: 300px;
@@ -138,9 +187,9 @@ ul {
     transition: .5s;
 }
 .ilya {
-    -webkit-box-shadow: 12px 12px 12px -8px #fa73a2;
-    -moz-box-shadow: 12px 12px 12px -8px #ff5289;
-    box-shadow: 12px 12px 12px -8px #fd3769;
+    -webkit-box-shadow: 12px 12px 12px -8px #faa273;
+    -moz-box-shadow: 12px 12px 12px -8px #ff8f52;
+    box-shadow: 12px 12px 12px -8px #ff6a1a;
 }
 
 .yousif {
@@ -156,9 +205,9 @@ ul {
 }
 
 .matt {
-    -webkit-box-shadow: 12px 12px 12px -8px #fa73a2;
-    -moz-box-shadow: 12px 12px 12px -8px #ff5289;
-    box-shadow: 12px 12px 12px -8px #fd3769;
+    -webkit-box-shadow: 12px 12px 12px -8px #c9825f;
+    -moz-box-shadow: 12px 12px 12px -8px #c47c4a;
+    box-shadow: 12px 12px 12px -8px #ad6131;
 }
 
 .kara {
