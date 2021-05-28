@@ -1,3 +1,32 @@
+#ourteam {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    margin-left: 50%;
+    top: 50%;
+}
+
+.imageheader{
+    margin-top: 5rem;
+}
+
+.teamUL {
+    margin-top: 3rem;
+    list-style-type: none;
+    display: inline;
+}
+
+.teamUL li {
+    padding: .5rem;
+}
+
+.teamheader{
+    margin-top: 5rem;
+    margin-left: 20%;
+    margin-right: 50%;
+}
+
 video {
     z-index: -1;
     position: fixed;
@@ -43,10 +72,18 @@ ul {
     list-style-type: none;
 }
 
+#starrating img {
+    height: 100px;
+}
+
 .centered {
     text-align: center;
     margin: auto;
     top: 50%;
+}
+
+.featuredSize {
+    height: 500px;
 }
 .menuphoto {
     max-width: 100%;
@@ -58,27 +95,11 @@ ul {
 }
 
 #album {
-    border-image-width: 100cm;
+    border-image-width: .5rem;
     font-size: 3rem;
 }
 
-#head {
-    font-size:3rem;
-    font-weight:bold;
-    margin: auto;
-    color:#1779A7;
-    font-style: italic;
-    text-shadow: 2px 2px #6457ad;
-}
 
-#head1 {
-    font-size:3rem;
-    font-weight:bold;
-    margin: auto;
-    color:#1779A7;
-    font-style: italic;
-    text-shadow: 2px 2px #6457ad;
-}
 
 .indexImage{
     width: 300px;
@@ -116,6 +137,37 @@ ul {
     perspective: 600px;
     transition: .5s;
 }
+.ilya {
+    -webkit-box-shadow: 12px 12px 12px -8px #fa73a2;
+    -moz-box-shadow: 12px 12px 12px -8px #ff5289;
+    box-shadow: 12px 12px 12px -8px #fd3769;
+}
+
+.yousif {
+    -webkit-box-shadow: 12px 12px 12px -8px #73b4fa;
+    -moz-box-shadow: 12px 12px 12px -8px #527dff;
+    box-shadow: 12px 12px 12px -8px #376ffd;
+}
+
+.patrick {
+    -webkit-box-shadow: 12px 12px 12px -8px #73facb;
+    -moz-box-shadow: 12px 12px 12px -8px #52ffae;
+    box-shadow: 12px 12px 12px -8px #37fdc5;
+}
+
+.matt {
+    -webkit-box-shadow: 12px 12px 12px -8px #fa73a2;
+    -moz-box-shadow: 12px 12px 12px -8px #ff5289;
+    box-shadow: 12px 12px 12px -8px #fd3769;
+}
+
+.kara {
+    -webkit-box-shadow: 12px 12px 12px -8px #fa73a2;
+    -moz-box-shadow: 12px 12px 12px -8px #ff5289;
+    box-shadow: 12px 12px 12px -8px #fd3769;
+}
+
+
 .card:hover .card-front{
     transform: rotateX(-180deg);
 }
@@ -125,7 +177,7 @@ ul {
 }
 
 .card-back h2 {
-    margin: 60% auto 35% auto;
+    margin: 1rem;
     font-size: 26px;
 }
 
@@ -140,7 +192,8 @@ ul {
     background-color: #161616;
     backface-visibility: hidden;
     transform: rotateX(180deg);
-    transition: .5s; color: #FF4A5A;
+    transition: .5s;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -153,8 +206,8 @@ ul {
 }
 
 .card-back a:hover {
-    color: #161616;
-    background-color: #FF4A54;
+    color: #ffffff;
+    background-color: #0063ba;
 }
 
 .card-front-ilya {

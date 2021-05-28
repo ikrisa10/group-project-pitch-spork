@@ -39,7 +39,8 @@ const IndexPage = props => {
     return (
         <div className="centered">
             <div className="grid-container">
-                <h1 id="head">All Albums to Review</h1>
+                <img className="imageheader" src="https://pitch-spork.s3.us-east-2.amazonaws.com/all-albums-text.png" alt="text reads all albums" />
+                <br/>
                 <div className="grid-x grid-padding-x">
                     <ul className="grid-x grid-margin-x" id="album">
                         {albumList}

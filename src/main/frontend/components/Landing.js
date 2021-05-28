@@ -49,11 +49,12 @@ const Landing = (props) => {
                    playsInline muted></video>
 
             <div className="featuredalbum" id="featureddiv">
-                <h2 >Featured Album:</h2>
-                <h1 >{randomAlbum.title}</h1>
-                <img src={randomAlbum.coverUrl}/>
-                <h3 >{randomAlbum.artist}</h3>
-                <ul >{reviewsList}</ul>
+                <img src="https://pitch-spork.s3.us-east-2.amazonaws.com/featured-text.png" alt="text reads featured" />
+                <br/>
+                <img src={randomAlbum.coverUrl} className="featuredSize"/>
+                <h3>{randomAlbum.title} by {randomAlbum.artist}</h3>
+                <h4>genre: {randomAlbum.genre}</h4>
+                <ul>{reviewsList}</ul>
             </div>
 
         </div>

@@ -39,7 +39,8 @@ const undiscoveredIndexPage = props => {
     return (
         <div className="centered">
             <div className="grid-container">
-            <h1 id="head1">Undiscovered Artists - Be the First to Review</h1>
+            <img className="imageheader" src="https://pitch-spork.s3.us-east-2.amazonaws.com/undiscovered-text.png" alt="text reads undiscovered" />
+                <br/>
             <ul className="grid-x grid-margin-x">{albumList}</ul>
             </div>
         </div>

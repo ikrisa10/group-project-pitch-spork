@@ -100,7 +100,8 @@ export const MusicianForm = (props) => {
 
   return (
     <div>
-      <h2>Add Your Album:</h2>
+      <img className="imageheader" src="https://pitch-spork.s3.us-east-2.amazonaws.com/add-an-album-text.png" alt="text reads add an album"/>
+      <br/>
       <form onSubmit={handleSubmit} className="adoption_app">
         <div className="grid-container">
           <div className="grid-x grid-padding-x">
