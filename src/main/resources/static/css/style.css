@@ -1,10 +1,112 @@
-.bgvideo {
-    position: absolute;
+video {
+    z-index: -1;
+    position: fixed;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+#navbar {
+    background-color: white;
+    -webkit-box-shadow: 0 10px 8px -8px #444444;
+    -moz-box-shadow: 0 10px 8px -8px #494949;
+    box-shadow: 0 10px 8px -8px #525252;
+    z-index: 100;
+    position: fixed;
     width: 100%;
+    top: 0;
 }
-body {
-  background-color: lightblue;
+#navbar a{
+    color: black;
+    font-size: 1rem;
 }
+#navbar ul, li {
+    background-color: white;
+}
+
+.featuredalbum {
+    background-color: rgba(255, 255, 255, 0.66);
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 20px;
+    margin-top: 60rem;
+    text-align: center;
+    align-content: center;
+}
+
+#featuredalbum {
+    margin-top: 60rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.centered {
+    text-align: center;
+    margin: auto;
+    top: 50%;
+}
+.menuphoto {
+    max-width: 100%;
+    width: 2rem;
+}
+
+.companyicon {
+    height: 3rem;
+}
+
+#album {
+    border-image-width: 100cm;
+    font-size: 3rem;
+}
+
+#head {
+    font-size:3rem;
+    font-weight:bold;
+    margin: auto;
+    color:#1779A7;
+    font-style: italic;
+    text-shadow: 2px 2px #6457ad;
+}
+
+#head1 {
+    font-size:3rem;
+    font-weight:bold;
+    margin: auto;
+    color:#1779A7;
+    font-style: italic;
+    text-shadow: 2px 2px #6457ad;
+}
+
+.indexImage{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px #0b081d;
+}
+.album-tile {
+    margin: auto;
+    padding-top: 30px;
+    padding-right:15px ;
+}
+.description {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: inherit;
+}
+.album-title {
+    font-style: normal;
+    font-weight: 800;
+    color:rgb(88, 6, 6);
+    padding-bottom: 10px;
+}
+.album-d {
+    margin-top: 0px;
+}
+
+
 .card {
     position: relative;
     /*top: 50%; left: 50%*/
@@ -114,102 +216,4 @@ body {
     transform: rotateX(0deg);
     transition: .5s;
     background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/kara.PNG);
-}
-
-.footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
-    color: darkgrey;
-    text-align: center;
-    -webkit-box-shadow: 10px 10px 8px 8px #444444;
-    -moz-box-shadow: 10px 10px 8px 8px #494949;
-    box-shadow: 10px 10px 8px 8px #525252;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.centered {
-    text-align: center;
-    margin: auto;
-    top: 50%;
-}
-
-#navbar {
-    background-color: white;
-    -webkit-box-shadow: 0 10px 8px -8px #444444;
-    -moz-box-shadow: 0 10px 8px -8px #494949;
-    box-shadow: 0 10px 8px -8px #525252;
-}
-#navbar a{
-    color: black;
-    font-size: 1rem;
-}
-#navbar ul, li {
-    background-color: white;
-}
-.menuphoto {
-    max-width: 100%;
-    width: 2rem;
-}
-
-.companyicon {
-    height: 3rem;
-}
-
-#album {
- border-image-width: 100cm;
- font-size: 3rem;
-}
-ul {
-    list-style-type: none;
-    border-image-slice: inherit;
-}
-
-#head {
- font-size:3rem;
- font-weight:bold;
- margin: auto;
- color:#1779A7;
- font-style: italic;
- text-shadow: 2px 2px #6457ad;
-}
-
-#head1 {
-    font-size:3rem;
-    font-weight:bold;
-    margin: auto;
-    color:#1779A7;
-    font-style: italic;
-    text-shadow: 2px 2px #6457ad;
-   }
-
-.indexImage{
-    width: 300px;
-    height: 300px;
-    margin: auto;
-    border-radius: 15px;
-    box-shadow: 5px 5px #0b081d;
-}
-.album-tile {
-    margin: auto;
-    padding-top: 30px;
-    padding-right:15px ;
-}
-.description {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: inherit;
-}
-.album-title {
-    font-style: normal;
-    font-weight: 800;
-    color:rgb(88, 6, 6);
-    padding-bottom: 10px;
-}
-.album-d {
-  margin-top: 0px;
 }

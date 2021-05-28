@@ -76,17 +76,6 @@ const NavBar = props => {
                 <Route exact path="/albums/:id" component={AlbumShow}/>
                 <Route exact path="/our-team" component={OurTeam}/>
             </Switch>
-
-
-            <footer data-sticky-container>
-                <div className="footer">
-                    <ul className="inline-center">
-                        <li>| &copy; Team-2, Launch Academy Group Project May 2021 |</li>
-                        <li>(alphabetical appearance) Ilya, Karalynn, Matt, Patrick, Yousif</li>
-                    </ul>
-                </div>
-            </footer>
-
         </div>
     )
 }

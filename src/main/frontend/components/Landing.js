@@ -45,21 +45,15 @@ const Landing = (props) => {
 
     return (
         <div>
-            <div className="bgvideo">
-                <video loop muted autoPlay poster="img/videoframe.jpg" className="bgvideo">
-                    <source src="https://pitch-spork.s3.us-east-2.amazonaws.com/Main.mp4" type="video/mp4"/>
-                </video>
-            </div>
+            <video src="https://pitch-spork.s3.us-east-2.amazonaws.com/Main.mp4" autoPlay loop
+                   playsInline muted></video>
 
-            <div>
-                <h2>Try Something New From Our Collection!</h2>
-                <h1>{randomAlbum.title}</h1>
+            <div className="featuredalbum" id="featureddiv">
+                <h2 >Featured Album:</h2>
+                <h1 >{randomAlbum.title}</h1>
                 <img src={randomAlbum.coverUrl}/>
-                <h3>{randomAlbum.artist}</h3>
-            </div>
-
-            <div>
-                <ul>{reviewsList}</ul>
+                <h3 >{randomAlbum.artist}</h3>
+                <ul >{reviewsList}</ul>
             </div>
 
         </div>
