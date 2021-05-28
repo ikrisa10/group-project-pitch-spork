@@ -43,6 +43,20 @@ const Landing = (props) => {
     );
   });
 
+  let displayWhatToShow;
+  let albumLink = "/albums/" + randomAlbum.id;
+
+  if (reviews.length == 0) {
+    displayWhatToShow = (
+      <div>
+        <h3> No reviews for this album. </h3>
+        <Link to={albumLink}>Click here to leave the first review!</Link>
+      </div>
+    );
+  } else {
+    displayWhatToShow = <ul>{reviewsList}</ul>;
+  }
+
   return (
     <div className="grid-y medium-grid-frame">
       <div className="cell shrink header medium-cell-block-container"></div>
@@ -50,12 +64,14 @@ const Landing = (props) => {
         <div className="grid-x grid-padding-x">
           <div className="cell medium-4 medium-cell-block-y">
             <h2>Try Something New From Our Collection!</h2>
-            <h1>{randomAlbum.title}</h1>
+            <Link to={albumLink}>
+              <h1>{randomAlbum.title}</h1>
+            </Link>
             <img src={randomAlbum.coverUrl} />
             <h3>{randomAlbum.artist}</h3>
           </div>
           <div className="cell medium-8 medium-cell-block-y">
-            <ul>{reviewsList}</ul>
+            {displayWhatToShow}
           </div>
         </div>
       </div>
