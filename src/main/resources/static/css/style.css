@@ -75,6 +75,11 @@
     margin-right: 50%;
 }
 
+.teamspacer{
+    margin-top: 14rem;
+    margin-left: 20%;
+}
+
 video {
     z-index: -1;
     position: fixed;
@@ -216,6 +221,12 @@ ul {
     box-shadow: 12px 12px 12px -8px #fd3769;
 }
 
+.launchacademy {
+    -webkit-box-shadow: 12px 12px 12px -8px #9a40c1;
+    -moz-box-shadow: 12px 12px 12px -8px #b11aad;
+    box-shadow: 12px 12px 12px -8px #900090;
+}
+
 
 .card:hover .card-front{
     transform: rotateX(-180deg);
@@ -318,4 +329,16 @@ ul {
     transform: rotateX(0deg);
     transition: .5s;
     background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/kara.PNG);
+}
+.card-front-launchacademy {
+    height: 100%; width: 100%;
+    background-position: 50% 50%;
+    background-size:cover;
+    position: absolute;
+    /*top: 0; left: 0;*/
+    background-color: #161616;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: .5s;
+    background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/launchacademy.jpg);
 }
