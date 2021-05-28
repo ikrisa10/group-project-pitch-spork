@@ -68,7 +68,6 @@ const Landing = (props) => {
                 <ul>{reviewsList}</ul>
                 <div><Link to={albumLink}>{linkText}</Link></div>
             </div>
-
         </div>
     );
 };
