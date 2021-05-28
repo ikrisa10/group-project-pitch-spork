@@ -77,7 +77,7 @@ public class InitialDataSeeder implements CommandLineRunner {
         albumFive.setEmbedUrl("<iframe src=\"https://open.spotify.com/embed/album/5mKAfuLtz4uhQ3iYHYqvIA\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>");
 
         Album albumSix = new Album();
-        albumSix.setTitle("The Jungle Is The Only Way Out");
+        albumSix.setTitle("The Only Way Out");
         albumSix.setArtist("Mereba");
         albumSix.setGenre("R&B");
         albumSix.setEmail("merebaohobviouslydoesntexist@gmail.com");

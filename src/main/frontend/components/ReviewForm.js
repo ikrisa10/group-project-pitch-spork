@@ -69,6 +69,7 @@ const ReviewForm = (props) => {
     };
 
     const clearForm = (event) => {
+        event.preventDefault()
         setForm({
             rating: "",
             name: "",
@@ -139,8 +140,8 @@ const ReviewForm = (props) => {
 
                 </label>
 
-                <div className="button-group">
-                    <button className="button hollow" onClick={clearForm}>
+                <div className="button-group align-justify">
+                    <button className="button" onClick={clearForm}>
                         Clear Form
                     </button>
                     <input className="button" type="submit" value="Submit your review"/>

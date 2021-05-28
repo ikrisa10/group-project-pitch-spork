@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { Redirect } from "react-router-dom";
 import ReviewForm from "./ReviewForm";
 import ReviewTile from "./ReviewTile";
 
@@ -6,19 +7,27 @@ const AlbumShow = (props) => {
     const [album, setAlbum] = useState({});
     const [form, setForm] = useState(false);
     const [reviews, setReviews] = useState([]);
+    const [redirect, setRedirect] = useState(false)
 
     const getAlbum = async () => {
         try {
             const id = props.match.params.id;
             const response = await fetch(`/api/v1/album/${id}`);
-            if (!response.ok) {
+            if (!response.ok && response.status != 404) {
                 const errorMessage = `${response.status} (${response.statusText})`;
                 const error = new Error(errorMessage);
                 throw error;
+            } else if (response.status == 404) {
+              setRedirect(true);
+            } else {
+              const responseBody = await response.json();
+              setAlbum(responseBody);
+              if (responseBody.reviews.length == 0) {
+                setReviews([{"id":0,"rating":1,"name":"Your Name Could Be Here","email":"","reviewBody":"Your review could be here my fiend, we miss it","createdAt":"Whenever your are ready"}])  
+              } else {
+                setReviews(responseBody.reviews);
+              }
             }
-            const responseBody = await response.json();
-            setAlbum(responseBody);
-            setReviews(responseBody.reviews);
         } catch (err) {
             console.error(`Album not found: ${err.message}`);
         }
@@ -33,7 +42,11 @@ const AlbumShow = (props) => {
     };
 
     const updateReviews = (newReview) => {
-        setReviews([...reviews, newReview])
+        if (reviews[0].id == 0) {
+          setReviews([newReview])  
+        } else {
+          setReviews([...reviews, newReview])
+        }
     };
 
     let reviewFormDisplay;
@@ -73,13 +86,15 @@ const AlbumShow = (props) => {
         return <div dangerouslySetInnerHTML={createMarkup()}/>;
     }
 
+    if (redirect) {
+      return <Redirect to="/404" />
+    }
+
     return (
         <div className="centered" id="albumshowpage">
             <div className="showcontainer">
                 <img className="showalbumcover" src={album.coverUrl} alt={altText}/>
-                <h5 className="showalbumtext">{album.title} by {album.artist}</h5>
-                <br/>
-                <h5 className="showalbumtext">{album.genre}, released {album.releaseYear}</h5>
+                <h5 className="showalbumtext">{album.title} by {album.artist}<br/>{album.genre}, released {album.releaseYear}</h5>
             </div>
 
             <div className="grid-container">
@@ -88,14 +103,14 @@ const AlbumShow = (props) => {
                         <li className="inner-content cell medium-6">
 
                             {MyComponent()}
+                            <button className="button hollow" onClick={toggleFormShow}>
+                                Add review
+                            </button>
                         </li>
 
                         <li className="inner-content cell medium-6">
                             <div>
                                 {reviewFormDisplay}
-                                <button className="button hollow" onClick={toggleFormShow}>
-                                    Add review
-                                </button>
                             </div>
                             <ul className="no-bullet">{reviewsList}</ul>
                         </li>

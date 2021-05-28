@@ -36,38 +36,38 @@ public class Album {
     @Column(name = "id", nullable = false, unique = true)
     private Integer id;
 
-    @NotBlank
-    @Length(max = 255)
+    @NotBlank (message = "* title field can not be blank")
+    @Length(max = 255, message = "* title field can not be longer than 255 characters")
     @Column(name = "title", nullable = false)
     private String title;
 
-    @NotBlank
-    @Length(max = 255)
+    @NotBlank (message = "* artist field can not be blank")
+    @Length(max = 255, message = "* title field can not be longer than 255 characters")
     @Column(name = "artist", nullable = false)
     private String artist;
 
-    @NotBlank
-    @Length(max = 255)
+    @NotBlank (message = "* genre title field can not be blank")
+    @Length(max = 255, message = "* title field can not be longer than 255 characters")
     @Column(name = "genre", nullable = false)
     private String genre;
 
-    @NotBlank
-    @Length(max = 320)
-    @Email
+    @NotBlank(message = "* email field can not be blank")
+    @Length(max = 320, message = "* title field can not be longer than 320 characters")
+    @Email(message = "* email should be well formed and have @ part (...@gmail.com, @aol.com)")
     @Column(name = "email", nullable = false)
     private String email;
 
-    @URL
-    @Length(max = 500)
+    @URL(message = "* url should be an accurate format")
+    @Length(max = 500, message = "* length field can not be longer than 500 characters")
     @Column(name = "cover_url", nullable = false)
     private String coverUrl;
 
-    @NotNull(message = "Release year should be provided")
-    @Range(min = 1980, message = "We are only interested in new, undiscovered albums from 1980 release years")
+    @NotNull(message = "* release year should be provided")
+    @Range(min = 1881, message = "* we are only interested in new, undiscovered albums from 1881 release years")
     @Column(name = "release_year", nullable = false)
     private Integer releaseYear;
 
-    @NotBlank
+    @NotBlank(message = "* embedded link can not be blank")
     @Column(name = "embed_url", nullable = false)
     private String embedUrl;
 

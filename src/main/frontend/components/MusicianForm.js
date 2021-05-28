@@ -67,7 +67,7 @@ export const MusicianForm = (props) => {
         ]
         requiredFields.forEach(field => {
             if (newAlbum[field].trim() === "") {
-                submissionErrors = {...submissionErrors, [field]: `is required`}
+                submissionErrors = {...submissionErrors, [field]: `* field is required`}
             }
         })
         setErrors(submissionErrors)
@@ -96,22 +96,23 @@ export const MusicianForm = (props) => {
             releaseYear: "",
             embedUrl: ""
         })
+        setErrors([])
     }
 
     return (
-        <div>
+        <div className="musician-form">
             <img className="imageheader" src="https://pitch-spork.s3.us-east-2.amazonaws.com/add-an-album-text.png"
                  alt="text reads add an album"/>
             <br/>
             <form onSubmit={handleSubmit} className="adoption_app">
-                <div className="grid-container">
+                {/* <div className="grid-container">
                     <div className="grid-x grid-padding-x">
-                        {/* <div className="cell">
+                        <div className="cell">
               <Error errors={errors} />
             </div> */}
 
-                        <div className="row">
-                            <div className="medium-6 columns">
+                        {/* <div className="row"> */}
+                            <div>
                                 <label htmlFor="title">
                                     Album Title:
                                     <input
@@ -125,7 +126,7 @@ export const MusicianForm = (props) => {
                                     <span className="error">{errors.title}</span>
                                 </label>
                             </div>
-                            <div className="medium-6 columns">
+                            <div>
                                 <label htmlFor="artist">
                                     Artist Name:
                                     <input
@@ -139,7 +140,7 @@ export const MusicianForm = (props) => {
                                     <span className="error">{errors.artist}</span>
                                 </label>
                             </div>
-                            <div className="medium-6 columns">
+                            <div>
                                 <label htmlFor="genre">
                                     Genre:
                                     <input
@@ -153,7 +154,7 @@ export const MusicianForm = (props) => {
                                     <span className="error">{errors.genre}</span>
                                 </label>
                             </div>
-                            <div className="medium-6 columns">
+                            <div>
                                 <label htmlFor="email">
                                     Musician's Email:
                                     <input
@@ -167,7 +168,7 @@ export const MusicianForm = (props) => {
                                     <span className="error">{errors.email}</span>
                                 </label>
                             </div>
-                            <div className="medium-6 columns">
+                            <div>
                                 <label htmlFor="coverUrl">
                                     Album's cover Photo Url:
                                     <input
@@ -181,7 +182,7 @@ export const MusicianForm = (props) => {
                                     <span className="error">{errors.coverUrl}</span>
                                 </label>
                             </div>
-                            <div className="medium-6 columns">
+                            <div>
                                 <label htmlFor="releaseYear">
                                     Album's Release Year:
                                     <input
@@ -190,12 +191,12 @@ export const MusicianForm = (props) => {
                                         name="releaseYear"
                                         onChange={handleInput}
                                         value={newAlbum.releaseYear}
-                                        placeholder="Your Name"
+                                        placeholder="Release Year"
                                     />
                                     <span className="error">{errors.releaseYear}</span>
                                 </label>
                             </div>
-                            <div className="medium-6 columns">
+                            <div>
                                 <label htmlFor="embedUrl">
                                     Album's Play URL:
                                     <input
@@ -209,11 +210,13 @@ export const MusicianForm = (props) => {
                                     <span className="error">{errors.embedUrl}</span>
                                 </label>
                             </div>
-                            <button className="button" onClick={clearChange}>Clear</button>
-                            <input className="button round" type="submit" value="Submit"/>
-                        </div>
-                    </div>
-                </div>
+                            <div className="button-group align-spaced">
+                                <button className="button" onClick={clearChange}>Clear</button>
+                                <input className="button round" type="submit" value="Submit"/>
+                            </div>
+                        {/* </div> */}
+                    {/* </div>
+                </div> */}
             </form>
         </div>
     )

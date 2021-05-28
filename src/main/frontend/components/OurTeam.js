@@ -13,8 +13,8 @@ const OurTeam = props => {
                             <li className="inner-content cell medium-4">
                                 <div className="card ilya">
                                     <div className="card-front-ilya">
-                                        <h2>Ilya</h2>
-                                        <h3>Software Developer</h3>
+                                        {/* <h2>Ilya</h2>
+                                        <h3>Software Developer</h3> */}
 
                                     </div>
                                     <div className="card-back">
@@ -38,8 +38,8 @@ const OurTeam = props => {
                             <li className="inner-content cell medium-4">
                                 <div className="card yousif">
                                     <div className="card-front-yousif">
-                                        <h2>Yousif</h2>
-                                        <h3>Software Developer</h3>
+                                        {/* <h2>Yousif</h2>
+                                        <h3>Software Developer</h3> */}
 
                                     </div>
                                     <div className="card-back">
@@ -64,14 +64,14 @@ const OurTeam = props => {
                             <li className="inner-content cell medium-4">
                                 <div className="card patrick">
                                     <div className="card-front-patrick">
-                                        <h2>Patrick</h2>
-                                        <h3>Software Developer</h3>
+                                        {/* <h2>Patrick</h2>
+                                        <h3>Software Developer</h3> */}
 
                                     </div>
                                     <div className="card-back">
                                         <div>
                                             <h4>
-                                                Mechanical Engineer by training, currently working to become a Software
+                                                Hi, I'm Patrick! Mechanical Engineer by training, currently working to become a Software
                                                 Developer.
                                                 I'm
                                                 passionate
@@ -88,8 +88,8 @@ const OurTeam = props => {
                             <li className="inner-content cell medium-4">
                                 <div className="card matt">
                                     <div className="card-front-matt">
-                                        <h2>Matt</h2>
-                                        <h3>Software Developer</h3>
+                                        {/* <h2>Matt</h2>
+                                        <h3>Software Developer</h3> */}
                                     </div>
                                     <div className="card-back">
                                         <div>
@@ -108,8 +108,8 @@ const OurTeam = props => {
                             <li className="inner-content cell medium-4">
                                 <div className="card kara">
                                     <div className="card-front-kara">
-                                        <h2>Kara</h2>
-                                        <h3>Software Developer</h3>
+                                        {/* <h2>Kara</h2>
+                                        <h3>Software Developer</h3> */}
                                     </div>
                                     <div className="card-back">
                                         <div>

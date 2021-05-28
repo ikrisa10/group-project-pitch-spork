@@ -6,6 +6,7 @@ import Index from "./Index.js"
 import OurTeam from "./OurTeam.js"
 import AlbumShow from "./AlbumShow.js"
 import Landing from "./Landing.js"
+import FourOFourTile from "./404.js"
 
 const NavBar = props => {
     return (
@@ -75,6 +76,7 @@ const NavBar = props => {
                 <Route exact path="/albums/undiscovered" component={UndiscoveredIndex}/>
                 <Route exact path="/albums/:id" component={AlbumShow}/>
                 <Route exact path="/our-team" component={OurTeam}/>
+                <Route exact path="/404" component={FourOFourTile}/>
             </Switch>
         </div>
     )

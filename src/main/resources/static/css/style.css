@@ -1,3 +1,18 @@
+.four-or-four {
+    width: 100%;
+    height: 100%;
+}
+
+.error {
+    color: red;
+}
+
+.musician-form {
+    padding-top: 2%;
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
 #ourteam {
     text-align: center;
     align-content: center;
@@ -71,7 +86,7 @@
 
 .teamheader {
     margin-top: 5rem;
-    margin-left: 20%;
+    margin-left: 27%;
     margin-right: 50%;
 }
 
