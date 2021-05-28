@@ -8,7 +8,7 @@
 }
 
 #albumshowpage {
-    margin-top:7rem;
+    margin-top: 7rem;
 }
 
 .showalbumcover {
@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom:2rem;
+    margin-bottom: 2rem;
 }
 
 .reviewcontainer {
@@ -55,7 +55,7 @@
     font-style: italic;
 }
 
-.imageheader{
+.imageheader {
     margin-top: 5rem;
 }
 
@@ -69,13 +69,13 @@
     padding: .5rem;
 }
 
-.teamheader{
+.teamheader {
     margin-top: 5rem;
     margin-left: 20%;
     margin-right: 50%;
 }
 
-.teamspacer{
+.teamspacer {
     margin-top: 14rem;
     margin-left: 20%;
 }
@@ -89,6 +89,7 @@ video {
     top: 0;
     left: 0;
 }
+
 #navbar {
     background-color: white;
     -webkit-box-shadow: 0 10px 8px -8px #444444;
@@ -99,10 +100,12 @@ video {
     width: 100%;
     top: 0;
 }
-#navbar a{
+
+#navbar a {
     color: black;
     font-size: 1rem;
 }
+
 #navbar ul, li {
     background-color: white;
 }
@@ -141,6 +144,7 @@ ul {
     -moz-box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.6);
     box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.82);
 }
+
 .menuphoto {
     max-width: 100%;
     width: 2rem;
@@ -155,28 +159,32 @@ ul {
     font-size: 3rem;
 }
 
-.indexImage{
-    width: 300px;
-    height: 300px;
+.indexImage {
+    position: relative;
+    height: 250px;
+    width: 250px;
     margin: auto;
-    border-radius: 15px;
     box-shadow: 5px 5px #0b081d;
 }
+
 .album-tile {
     margin: auto;
     padding-top: 30px;
-    padding-right:15px ;
+    padding-right: 15px;
 }
+
 .description {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: inherit;
 }
+
 .album-title {
     font-style: normal;
     font-weight: 800;
-    color:rgb(88, 6, 6);
+    color: rgb(88, 6, 6);
     padding-bottom: 10px;
 }
+
 .album-d {
     margin-top: 0px;
 }
@@ -185,12 +193,14 @@ ul {
 .card {
     position: relative;
     /*top: 50%; left: 50%*/
-    height: 400px; width: 300px;
+    height: 400px;
+    width: 300px;
     transform: translate(-50%, -50%);
     transform-style: preserve-3d;
     perspective: 600px;
     transition: .5s;
 }
+
 .ilya {
     -webkit-box-shadow: 12px 12px 12px -8px #faa273;
     -moz-box-shadow: 12px 12px 12px -8px #ff8f52;
@@ -228,7 +238,7 @@ ul {
 }
 
 
-.card:hover .card-front{
+.card:hover .card-front {
     transform: rotateX(-180deg);
 }
 
@@ -258,7 +268,8 @@ ul {
 }
 
 .card-back a {
-    height: 20px; width: 20px;
+    height: 20px;
+    width: 20px;
     padding: 5px 5px;
     border-radius: 4px;
     line-height: 20px;
@@ -271,9 +282,10 @@ ul {
 }
 
 .card-front-ilya {
-    height: 100%; width: 100%;
+    height: 100%;
+    width: 100%;
     background-position: 50% 50%;
-    background-size:cover;
+    background-size: cover;
     position: absolute;
     /*top: 0; left: 0;*/
     background-color: #161616;
@@ -282,10 +294,12 @@ ul {
     transition: .5s;
     background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/ilya.jpg);
 }
+
 .card-front-matt {
-    height: 100%; width: 100%;
+    height: 100%;
+    width: 100%;
     background-position: 50% 50%;
-    background-size:cover;
+    background-size: cover;
     position: absolute;
     /*top: 0; left: 0;*/
     background-color: #161616;
@@ -294,10 +308,12 @@ ul {
     transition: .5s;
     background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/matt.jpg);
 }
+
 .card-front-patrick {
-    height: 100%; width: 100%;
+    height: 100%;
+    width: 100%;
     background-position: 50% 50%;
-    background-size:cover;
+    background-size: cover;
     position: absolute;
     /*top: 0; left: 0;*/
     background-color: #161616;
@@ -306,10 +322,12 @@ ul {
     transition: .5s;
     background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/patrick.JPG);
 }
+
 .card-front-yousif {
-    height: 100%; width: 100%;
+    height: 100%;
+    width: 100%;
     background-position: 50% 50%;
-    background-size:cover;
+    background-size: cover;
     position: absolute;
     /*top: 0; left: 0;*/
     background-color: #161616;
@@ -318,10 +336,12 @@ ul {
     transition: .5s;
     background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/yousif.jpg);
 }
+
 .card-front-kara {
-    height: 100%; width: 100%;
+    height: 100%;
+    width: 100%;
     background-position: 50% 50%;
-    background-size:cover;
+    background-size: cover;
     position: absolute;
     /*top: 0; left: 0;*/
     background-color: #161616;
@@ -330,10 +350,12 @@ ul {
     transition: .5s;
     background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/kara.PNG);
 }
+
 .card-front-launchacademy {
-    height: 100%; width: 100%;
+    height: 100%;
+    width: 100%;
     background-position: 50% 50%;
-    background-size:cover;
+    background-size: cover;
     position: absolute;
     /*top: 0; left: 0;*/
     background-color: #161616;

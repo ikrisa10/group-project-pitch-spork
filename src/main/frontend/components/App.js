@@ -7,11 +7,11 @@ import 'regenerator-runtime/runtime'
 const App = props => {
 
     return (
-            <div>
-                <BrowserRouter>
-                    <Route path="/" component={NavBar}/>
-                </BrowserRouter>
-            </div>
+        <div>
+            <BrowserRouter>
+                <Route path="/" component={NavBar}/>
+            </BrowserRouter>
+        </div>
     )
 }
 

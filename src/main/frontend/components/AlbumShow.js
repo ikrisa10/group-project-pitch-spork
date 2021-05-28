@@ -76,10 +76,10 @@ const AlbumShow = (props) => {
     return (
         <div className="centered" id="albumshowpage">
             <div className="showcontainer">
-            <img className="showalbumcover" src={album.coverUrl} alt={altText}/>
-            <h5 className="showalbumtext">{album.title} by {album.artist}</h5>
+                <img className="showalbumcover" src={album.coverUrl} alt={altText}/>
+                <h5 className="showalbumtext">{album.title} by {album.artist}</h5>
                 <br/>
-            <h5 className="showalbumtext">{album.genre}, released {album.releaseYear}</h5>
+                <h5 className="showalbumtext">{album.genre}, released {album.releaseYear}</h5>
             </div>
 
             <div className="grid-container">

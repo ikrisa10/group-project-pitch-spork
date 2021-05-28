@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, {useState, useEffect} from "react"
 import AlbumTile from "./AlbumTile.js"
 
 const undiscoveredIndexPage = props => {
@@ -41,11 +41,12 @@ const undiscoveredIndexPage = props => {
     return (
         <div className="centered">
             <div className="grid-container">
-            <img className="imageheader" src="https://pitch-spork.s3.us-east-2.amazonaws.com/undiscovered-text.png" alt="text reads undiscovered" />
+                <img className="imageheader" src="https://pitch-spork.s3.us-east-2.amazonaws.com/undiscovered-text.png"
+                     alt="text reads undiscovered"/>
                 <br/>
-            <ul className="grid-x grid-margin-x" id="album">
-                {albumList}
-            </ul>
+                <ul className="grid-x grid-margin-x" id="album">
+                    {albumList}
+                </ul>
             </div>
         </div>
     )

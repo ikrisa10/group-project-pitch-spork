@@ -29,6 +29,14 @@ const Landing = (props) => {
         getRandomAlbum();
     }, []);
 
+    let linkText = ""
+    let albumLink = "/albums/" + randomAlbum.id
+
+    if (reviews.length == 0) {
+        linkText = "Be the First to Review"
+    } else {
+        linkText = "Leave Your Own Review"
+    }
     const reviewsList = reviews.map((review) => {
         return (
             <li key={review.id}>
@@ -49,14 +57,16 @@ const Landing = (props) => {
                    playsInline muted></video>
 
             <div className="featuredalbum" id="featureddiv">
-                <img src="https://pitch-spork.s3.us-east-2.amazonaws.com/featured-text.png" alt="text reads featured" />
+                <img src="https://pitch-spork.s3.us-east-2.amazonaws.com/featured-text.png" alt="text reads featured"/>
                 <br/>
-                <h3>Title: {randomAlbum.title}</h3>
-                <img src={randomAlbum.coverUrl} className="featuredSize"/>
+                <Link to={{albumLink}}>
+                    <h3>{randomAlbum.title}</h3>
+                    <img src={randomAlbum.coverUrl} className="featuredSize"/>
+                </Link>
                 <h3>Artist: {randomAlbum.artist}</h3>
                 <h4>Genre: {randomAlbum.genre}</h4>
-                <h4>what people are saying:</h4>
                 <ul>{reviewsList}</ul>
+                <div><Link to={albumLink}>{linkText}</Link></div>
             </div>
 
         </div>
