@@ -1,7 +1,6 @@
 package com.launchacademy.reviews.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +15,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -29,37 +27,38 @@ import org.hibernate.validator.constraints.Range;
 @Table(name = "reviews")
 @NoArgsConstructor
 public class Review {
-    @Id
-    @SequenceGenerator(name = "reviews_generator", sequenceName = "reviews_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reviews_generator")
-    @Column(name = "id", nullable = false, unique = true)
-    private Integer id;
 
-    @NotNull(message = "* rating should be provided")
-    @Positive(message = "* rating can not be negative or zero")
-    @Range(min = 1, max = 5, message = "* rating number should be between 1 and 5")
-    @Column(name = "rating", nullable = false)
-    private Integer rating;
+  @Id
+  @SequenceGenerator(name = "reviews_generator", sequenceName = "reviews_id_seq", allocationSize = 1)
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reviews_generator")
+  @Column(name = "id", nullable = false, unique = true)
+  private Integer id;
 
-    @NotBlank(message = "* name field should be filled out")
-    @Length(max = 255, message = "* name field should be 255 characters max")
-    @Column(name = "name", nullable = false)
-    private String name;
+  @NotNull(message = "* rating should be provided")
+  @Positive(message = "* rating can not be negative or zero")
+  @Range(min = 1, max = 5, message = "* rating number should be between 1 and 5")
+  @Column(name = "rating", nullable = false)
+  private Integer rating;
 
-    @NotBlank(message = "* email field should be filled out")
-    @Length(max = 320, message = "* email field should be 320 characters max")
-    @Email(message = "* email should be well formed and have @ part (...@gmail.com, @aol.com)")
-    @Column(name = "email", nullable = false)
-    private String email;
+  @NotBlank(message = "* name field should be filled out")
+  @Length(max = 255, message = "* name field should be 255 characters max")
+  @Column(name = "name", nullable = false)
+  private String name;
 
-    @Column(name = "review_body")
-    private String reviewBody;
+  @NotBlank(message = "* email field should be filled out")
+  @Length(max = 320, message = "* email field should be 320 characters max")
+  @Email(message = "* email should be well formed and have @ part (...@gmail.com, @aol.com)")
+  @Column(name = "email", nullable = false)
+  private String email;
 
-    @Column(name = "created_at", nullable = false)
-    private Date createdAt = new Date();
+  @Column(name = "review_body")
+  private String reviewBody;
 
-    @ManyToOne
-    @JoinColumn(name = "album_id", nullable = false)
-    @JsonIgnoreProperties("reviews")
-    private Album album;
+  @Column(name = "created_at", nullable = false)
+  private Date createdAt = new Date();
+
+  @ManyToOne
+  @JoinColumn(name = "album_id", nullable = false)
+  @JsonIgnoreProperties("reviews")
+  private Album album;
 }

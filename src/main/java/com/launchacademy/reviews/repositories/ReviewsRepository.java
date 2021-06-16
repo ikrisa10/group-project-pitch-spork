@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ReviewsRepository extends CrudRepository<Review, Integer> {
+
 }
