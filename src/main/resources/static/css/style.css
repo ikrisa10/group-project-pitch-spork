@@ -1,381 +1,380 @@
 .four-or-four {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .error {
-    color: red;
+  color: red;
 }
 
 .musician-form {
-    padding-top: 2%;
-    padding-left: 35%;
-    padding-right: 35%;
+  padding-top: 2%;
+  padding-left: 35%;
+  padding-right: 35%;
 }
 
 #ourteam {
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    margin-top: 10rem;
-    margin-left: 50%;
-    top: 50%;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  margin-left: 50%;
+  top: 50%;
 }
 
 #albumshowpage {
-    margin-top: 7rem;
+  margin-top: 7rem;
 }
 
 .showalbumcover {
-    height: 100px;
-    float: left;
-    margin-left: 3rem;
+  height: 100px;
+  float: left;
+  margin-left: 3rem;
 }
 
 .showalbumtext {
-    padding-top: 10px;
-    padding-left: 3rem;
-    height: 100px;
-    float: right;
+  padding-top: 10px;
+  padding-left: 3rem;
+  height: 100px;
+  float: right;
 }
 
 .showcontainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .reviewcontainer {
-    text-align: left;
-    border: 2px solid #ccc;
-    background-color: #eee;
-    border-radius: 5px;
-    padding: 16px;
-    margin: 20px;
+  text-align: left;
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 20px;
 }
 
 .reviewcontainer img {
-    height: 75px;
-    margin-right: 20px;
-    border-radius: 50%;
-    padding: 10px;
+  height: 75px;
+  margin-right: 20px;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 .reviewername {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .reviewcontent {
-    font-style: italic;
+  font-style: italic;
 }
 
 .imageheader {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 
 .teamUL {
-    margin-top: 3rem;
-    list-style-type: none;
-    display: inline;
+  margin-top: 3rem;
+  list-style-type: none;
+  display: inline;
 }
 
 .teamUL li {
-    padding: .5rem;
+  padding: 0.5rem;
 }
 
 .teamheader {
-    margin-top: 5rem;
-    margin-left: 27%;
-    margin-right: 50%;
+  margin-top: 5rem;
+  margin-left: 27%;
+  margin-right: 50%;
 }
 
 .teamspacer {
-    margin-top: 14rem;
-    margin-left: 20%;
+  margin-top: 14rem;
+  margin-left: 20%;
 }
 
 video {
-    z-index: -1;
-    position: fixed;
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
+  z-index: -1;
+  position: fixed;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
 }
 
 #navbar {
-    background-color: white;
-    -webkit-box-shadow: 0 10px 8px -8px #444444;
-    -moz-box-shadow: 0 10px 8px -8px #494949;
-    box-shadow: 0 10px 8px -8px #525252;
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-    top: 0;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 8px -8px #444444;
+  -moz-box-shadow: 0 10px 8px -8px #494949;
+  box-shadow: 0 10px 8px -8px #525252;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 #navbar a {
-    color: black;
-    font-size: 1rem;
+  color: black;
+  font-size: 1rem;
 }
 
-#navbar ul, li {
-    background-color: white;
+#navbar ul,
+li {
+  background-color: white;
 }
 
 .featuredalbum {
-    background-color: rgba(255, 255, 255, 0.78);
-    margin-left: 30px;
-    margin-right: 30px;
-    padding: 3rem;
-    margin-top: 60rem;
-    text-align: center;
-    align-content: center;
+  background-color: rgba(255, 255, 255, 0.78);
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 3rem;
+  margin-top: 60rem;
+  text-align: center;
+  align-content: center;
 }
 
 #featuredalbum {
-    margin-top: 60rem;
+  margin-top: 60rem;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 #starrating img {
-    height: 100px;
+  height: 100px;
 }
 
 .centered {
-    text-align: center;
-    margin: auto;
-    top: 50%;
+  text-align: center;
+  margin: auto;
+  top: 50%;
 }
 
 .featuredSize {
-    height: 350px;
-    -webkit-box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.39);
-    -moz-box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.6);
-    box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.82);
+  height: 350px;
+  -webkit-box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.6);
+  box-shadow: 12px 12px 12px -8px rgba(0, 0, 0, 0.82);
 }
 
 .menuphoto {
-    max-width: 100%;
-    width: 2rem;
+  max-width: 100%;
+  width: 2rem;
 }
 
 .companyicon {
-    height: 3rem;
+  height: 3rem;
 }
 
 #album {
-    border-image-width: .5rem;
-    font-size: 3rem;
+  border-image-width: 0.5rem;
+  font-size: 3rem;
 }
 
 .indexImage {
-    position: relative;
-    height: 250px;
-    width: 250px;
-    margin: auto;
-    box-shadow: 5px 5px #0b081d;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  box-shadow: 5px 5px #0b081d;
 }
 
 .album-tile {
-    margin: auto;
-    padding-top: 30px;
-    padding-right: 15px;
+  margin: auto;
+  padding-top: 30px;
+  padding-right: 15px;
 }
 
 .description {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: inherit;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: inherit;
 }
 
 .album-title {
-    font-style: normal;
-    font-weight: 800;
-    color: rgb(88, 6, 6);
-    padding-bottom: 10px;
+  font-style: normal;
+  font-weight: 800;
+  color: rgb(88, 6, 6);
+  padding-bottom: 10px;
 }
 
 .album-d {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
-
 .card {
-    position: relative;
-    /*top: 50%; left: 50%*/
-    height: 400px;
-    width: 300px;
-    transform: translate(-50%, -50%);
-    transform-style: preserve-3d;
-    perspective: 600px;
-    transition: .5s;
+  position: relative;
+  /*top: 50%; left: 50%*/
+  height: 400px;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: 0.5s;
 }
 
 .ilya {
-    -webkit-box-shadow: 12px 12px 12px -8px #faa273;
-    -moz-box-shadow: 12px 12px 12px -8px #ff8f52;
-    box-shadow: 12px 12px 12px -8px #ff6a1a;
+  -webkit-box-shadow: 12px 12px 12px -8px #faa273;
+  -moz-box-shadow: 12px 12px 12px -8px #ff8f52;
+  box-shadow: 12px 12px 12px -8px #ff6a1a;
 }
 
 .yousif {
-    -webkit-box-shadow: 12px 12px 12px -8px #73b4fa;
-    -moz-box-shadow: 12px 12px 12px -8px #527dff;
-    box-shadow: 12px 12px 12px -8px #376ffd;
+  -webkit-box-shadow: 12px 12px 12px -8px #73b4fa;
+  -moz-box-shadow: 12px 12px 12px -8px #527dff;
+  box-shadow: 12px 12px 12px -8px #376ffd;
 }
 
 .patrick {
-    -webkit-box-shadow: 12px 12px 12px -8px #73facb;
-    -moz-box-shadow: 12px 12px 12px -8px #52ffae;
-    box-shadow: 12px 12px 12px -8px #37fdc5;
+  -webkit-box-shadow: 12px 12px 12px -8px #73facb;
+  -moz-box-shadow: 12px 12px 12px -8px #52ffae;
+  box-shadow: 12px 12px 12px -8px #37fdc5;
 }
 
 .matt {
-    -webkit-box-shadow: 12px 12px 12px -8px #c9825f;
-    -moz-box-shadow: 12px 12px 12px -8px #c47c4a;
-    box-shadow: 12px 12px 12px -8px #ad6131;
+  -webkit-box-shadow: 12px 12px 12px -8px #c9825f;
+  -moz-box-shadow: 12px 12px 12px -8px #c47c4a;
+  box-shadow: 12px 12px 12px -8px #ad6131;
 }
 
 .kara {
-    -webkit-box-shadow: 12px 12px 12px -8px #fa73a2;
-    -moz-box-shadow: 12px 12px 12px -8px #ff5289;
-    box-shadow: 12px 12px 12px -8px #fd3769;
+  -webkit-box-shadow: 12px 12px 12px -8px #fa73a2;
+  -moz-box-shadow: 12px 12px 12px -8px #ff5289;
+  box-shadow: 12px 12px 12px -8px #fd3769;
 }
 
 .launchacademy {
-    -webkit-box-shadow: 12px 12px 12px -8px #9a40c1;
-    -moz-box-shadow: 12px 12px 12px -8px #b11aad;
-    box-shadow: 12px 12px 12px -8px #900090;
+  -webkit-box-shadow: 12px 12px 12px -8px #9a40c1;
+  -moz-box-shadow: 12px 12px 12px -8px #b11aad;
+  box-shadow: 12px 12px 12px -8px #900090;
 }
 
-
 .card:hover .card-front {
-    transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
 }
 
 .card:hover .card-back {
-    transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 
 .card-back h2 {
-    margin: 1rem;
-    font-size: 26px;
+  margin: 1rem;
+  font-size: 26px;
 }
 
 .card-back h2 span {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .card-back {
-    height: 100%;
-    position: relative;
-    /*top: 0; left: 0;*/
-    background-color: #161616;
-    backface-visibility: hidden;
-    transform: rotateX(180deg);
-    transition: .5s;
-    color: #ffffff;
-    text-align: center;
+  height: 100%;
+  position: relative;
+  /*top: 0; left: 0;*/
+  background-color: #161616;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+  color: #ffffff;
+  text-align: center;
 }
 
 .card-back a {
-    height: 20px;
-    width: 20px;
-    padding: 5px 5px;
-    border-radius: 4px;
-    line-height: 20px;
-    transition: ease-in-out 0.1s;
+  height: 20px;
+  width: 20px;
+  padding: 5px 5px;
+  border-radius: 4px;
+  line-height: 20px;
+  transition: ease-in-out 0.1s;
 }
 
 .card-back a:hover {
-    color: #ffffff;
-    background-color: #0063ba;
+  color: #ffffff;
+  background-color: #0063ba;
 }
 
 .card-front-ilya {
-    height: 100%;
-    width: 100%;
-    background-position: 50% 50%;
-    background-size: cover;
-    position: absolute;
-    /*top: 0; left: 0;*/
-    background-color: #161616;
-    backface-visibility: hidden;
-    transform: rotateX(0deg);
-    transition: .5s;
-    background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/ilya.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  /*top: 0; left: 0;*/
+  background-color: #161616;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+  background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/ilya.jpg);
 }
 
 .card-front-matt {
-    height: 100%;
-    width: 100%;
-    background-position: 50% 50%;
-    background-size: cover;
-    position: absolute;
-    /*top: 0; left: 0;*/
-    background-color: #161616;
-    backface-visibility: hidden;
-    transform: rotateX(0deg);
-    transition: .5s;
-    background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/matt.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  /*top: 0; left: 0;*/
+  background-color: #161616;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+  background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/matt.jpg);
 }
 
 .card-front-patrick {
-    height: 100%;
-    width: 100%;
-    background-position: 50% 50%;
-    background-size: cover;
-    position: absolute;
-    /*top: 0; left: 0;*/
-    background-color: #161616;
-    backface-visibility: hidden;
-    transform: rotateX(0deg);
-    transition: .5s;
-    background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/patrick.JPG);
+  height: 100%;
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  /*top: 0; left: 0;*/
+  background-color: #161616;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+  background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/patrick.JPG);
 }
 
 .card-front-yousif {
-    height: 100%;
-    width: 100%;
-    background-position: 50% 50%;
-    background-size: cover;
-    position: absolute;
-    /*top: 0; left: 0;*/
-    background-color: #161616;
-    backface-visibility: hidden;
-    transform: rotateX(0deg);
-    transition: .5s;
-    background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/yousif.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  /*top: 0; left: 0;*/
+  background-color: #161616;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+  background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/yousif.jpg);
 }
 
 .card-front-kara {
-    height: 100%;
-    width: 100%;
-    background-position: 50% 50%;
-    background-size: cover;
-    position: absolute;
-    /*top: 0; left: 0;*/
-    background-color: #161616;
-    backface-visibility: hidden;
-    transform: rotateX(0deg);
-    transition: .5s;
-    background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/kara.PNG);
+  height: 100%;
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  /*top: 0; left: 0;*/
+  background-color: #161616;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+  background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/kara.PNG);
 }
 
 .card-front-launchacademy {
-    height: 100%;
-    width: 100%;
-    background-position: 50% 50%;
-    background-size: cover;
-    position: absolute;
-    /*top: 0; left: 0;*/
-    background-color: #161616;
-    backface-visibility: hidden;
-    transform: rotateX(0deg);
-    transition: .5s;
-    background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/launchacademy.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  /*top: 0; left: 0;*/
+  background-color: #161616;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+  background-image: url(https://pitch-spork.s3.us-east-2.amazonaws.com/launchacademy.jpg);
 }
