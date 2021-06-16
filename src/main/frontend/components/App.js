@@ -1,10 +1,17 @@
-import React from "react"
-import { hot } from "react-hot-loader/root"
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import { hot } from "react-hot-loader/root";
+import NavBar from "./Navbar.js";
+import "regenerator-runtime/runtime";
 
-
-const App = props => {
+const App = (props) => {
   return (
-    <div>Hello From React</div>
-  )
-}
-export default hot(App)
+    <div>
+      <BrowserRouter>
+        <Route path="/" component={NavBar} />
+      </BrowserRouter>
+    </div>
+  );
+};
+
+export default hot(App);

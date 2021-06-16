@@ -8,4 +8,4 @@ CREATE TABLE albums (
   cover_url VARCHAR(500),
   release_year INTEGER NOT NULL,
   embed_url TEXT NOT NULL
-)
+);

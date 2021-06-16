@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ReviewsService {
+
   private ReviewsRepository reviewsRepository;
   private AlbumService albumService;
 
@@ -18,10 +19,10 @@ public class ReviewsService {
     this.albumService = albumService;
   }
 
-	public List<Review> findAllReviewsForAlbum(Integer albumId) {
-		Album targetAlbum = albumService.findById(albumId);
-		return targetAlbum.getReviews();
-	}
+  public List<Review> findAllReviewsForAlbum(Integer albumId) {
+    Album targetAlbum = albumService.findById(albumId);
+    return targetAlbum.getReviews();
+  }
 
   public Review saveReview(Review review, Integer albumId) {
     Album reviewedAlbum = this.albumService.findById(albumId);

@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1")
 public class ApiRestControllerV1 {
+
   private AlbumService albumService;
   private ReviewsService reviewsService;
 
@@ -36,6 +37,11 @@ public class ApiRestControllerV1 {
   @GetMapping("/albums")
   public List<Album> getAllAlbums() {
     return albumService.findAllAlbums();
+  }
+
+  @GetMapping("/album/{id}")
+  public Album getSpecificAlbum(@PathVariable Integer id) {
+    return albumService.findById(id);
   }
 
   @GetMapping("/albums/random")
@@ -53,12 +59,12 @@ public class ApiRestControllerV1 {
     return albumService.findUnreviewedAlbums();
   }
 
-  @PostMapping("/album/create")
+  @PostMapping("/albums/create")
   public ResponseEntity createAlbum(@RequestBody @Valid Album album, BindingResult bindingResult) {
-    if(bindingResult.hasErrors()) {
+    if (bindingResult.hasErrors()) {
       Map<String, String> errors = new HashMap<>();
       List<FieldError> fieldErrors = bindingResult.getFieldErrors();
-      for(int i = 0; i < fieldErrors.size(); i++) {
+      for (int i = 0; i < fieldErrors.size(); i++) {
         errors.put(fieldErrors.get(i).getField(), fieldErrors.get(i).getDefaultMessage());
       }
       return new ResponseEntity(errors, HttpStatus.UNPROCESSABLE_ENTITY);
@@ -68,11 +74,12 @@ public class ApiRestControllerV1 {
   }
 
   @PostMapping("/review/create/{albumId}")
-  public ResponseEntity createReview(@RequestBody @Valid Review review, BindingResult bindingResult, @PathVariable Integer albumId) {
-    if(bindingResult.hasErrors()) {
+  public ResponseEntity createReview(@RequestBody @Valid Review review, BindingResult bindingResult,
+      @PathVariable Integer albumId) {
+    if (bindingResult.hasErrors()) {
       Map<String, String> errors = new HashMap<>();
       List<FieldError> fieldErrors = bindingResult.getFieldErrors();
-      for(int i = 0; i < fieldErrors.size(); i++) {
+      for (int i = 0; i < fieldErrors.size(); i++) {
         errors.put(fieldErrors.get(i).getField(), fieldErrors.get(i).getDefaultMessage());
       }
       return new ResponseEntity(errors, HttpStatus.UNPROCESSABLE_ENTITY);
@@ -82,6 +89,3 @@ public class ApiRestControllerV1 {
   }
 
 }
-
-// curl -X POST localhost:8080/api/v1/album/create -H 'Content-type:application/json' -d '{"title": "Impossible Love", "artist": "Kazem", "genre": "Pop", "email": "kazem@aolbookme.com", "coverUrl": "https://kazem.com", "releaseYear": "1995", "embedUrl": "https://google.com"}'
-// curl -X POST localhost:8080/api/v1/review/create/3 -H 'Content-type:application/json' -d '{"rating": "2", "name": "HarshCritic666", "email": "ihatelocalmusic@aol.com", "reviewBody": "album is overproduced, drum sound like a piece of paper"}'
